@@ -1,0 +1,8 @@
+1. Repozytorium - uporządkowane miejsce do przechowywania i udostępnianiania kodu.
+2. github - platforma umożliwiająca tworzyć, dzielić się oraz udostępniać projekty
+3. git - darmowe open source narzędzie zaprojektowane do zarządzania projektami, wersjami efektywnie i szybko
+4. commit - powiadomienie o modyfikacji kodu
+5. branch - rozgałęzienie projektu np. na bugfix, nową funkcjonalność lub modyfikacje kodu wśród współpracowników
+6. checkout - służy do przenoszenia się między gałęziami
+7. merge - złączenie brancha z innym
+9. rebase - przenosi sekwencje commitów na nowy bazowy
