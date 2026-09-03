@@ -1,0 +1,12 @@
+ZadaniePratyki
+pierwszego dnia zaczołem rozmysłac jak ta strona ma wyglondać zaczołem podstawowego grid i stworzyłem piliki które potrzebowałem i skonczyłem pierwszą seksje drugie dnia zaczołem 2 klejne sekcje a pozostawiałem troche niedokończonych spraw ostatniego dnia skonczyłem wszytkie seksje i zrobiłem js do wysuwanego menu i do animacji przy scroll
+
+czego sie nauczyłem :
+
+nauczyłem sie robic o wiele wiecej divów jak je dobrze nazywac przycinas zdj ogulnie dużo nowych funkcji w css jak i w html i nowych rzeczy w js bo małe rzeczy aż wkoncu mi sie udało
+
+problemy mam bardzo duże problemy z porozumieniem o responsywności wiec strona nie jest idealna ale jak pan zobaczy nie kotrę rzeczy sa ale tylko kilka tez miałem na poczontku problemy z js ponieważ dawno go nie używałem ale dałem sobie jakoś rade również mam problemy jak chodzi o proporcje wieć dużó rzeczy może sie nakładać na siebie i to w zły sposób ale wyglondą ze strony wchodzącego moim zdaniem dobrze
+
+miłego poglodania strony
+
+Activity
