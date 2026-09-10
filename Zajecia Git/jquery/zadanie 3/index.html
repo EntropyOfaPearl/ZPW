@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadania jquery</title>
+    <style>
+        #kwadrat { width: 150px; height: 150px; background: lightgray; }
+    </style>
+
+</head>
+<body>
+    <button id="przywitaj">Przywitaj się</button>
+    <p id="komunikat"></p>
+    <p id="licz">kliknięto 0 razy </p>
+    <button id="resetuj">resetuj</button>
+    <div id="kwadrat"></div>
+    
+    <script>
+        $(function() {
+            let $przywitaj = $("#przywitaj");
+            let $kwadrat = $("#kwadrat");
+            let $resetuj = $("#resetuj")
+            let counter = 0;
+            $przywitaj.click(function(){
+                $("#komunikat").text("Elo Żelo!");
+
+            })
+
+            $kwadrat.click(function(){
+                $kwadrat.css("background-color", "magenta")
+                counter +=1;
+                $("#licz").text(`kliknięto ${counter} razy`);
+
+            })
+
+            $resetuj.click(function(){
+                $kwadrat.css("background-color", "grey")
+                $("#komunikat").text("")
+            })
+        });
+  </script>
+</body>
+</html>
