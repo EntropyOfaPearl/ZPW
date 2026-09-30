@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadania jquery</title>
+    <script>
+        $(function(){
+           $(document).on("keypress keyup keydown",function(event){
+            $("#eventType").text(event.type)
+           })
+
+           $(document).on("mousemove",function(event){
+            $("#pageX").text(event.pageX)
+            $("#pageY").text(event.pageY)
+           })
+
+           let margin = 0;
+           let marginTop = 0;
+           $(document).on("keypress",function(event){
+            
+                if(event.key == "d")
+                    margin += 10
+                else if(event.key == "a") 
+                    margin -= 10
+                else if(event.key == "s")
+                    marginTop += 10
+                else if(event.key == "w")
+                    marginTop -= 10
+                $("#kwadrat").css("margin-left",`${margin}px`)
+                $("#kwadrat").css("margin-top",`${marginTop}px`)
+                console.log(randX + "  " + randY + "   " +margin+"   "+ marginTop)
+           })
+        
+           let randX = Math.floor((Math.random() * 500) + 1);
+           let randY = Math.floor((Math.random() * 500) + 1);
+           $("#japko").css("margin-left",`${randX}px`)
+           $("#japko").css("margin-top",`${randY}px`)
+           console.log(randX + "  " + randY + "   " +margin+"   "+ marginTop)
+
+           
+           
+
+        })
+
+    
+    </script>
+    
+    <style>
+        #kwadrat{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            margin-left: 0;
+            position: absolute;
+        }
+        #japko{
+            width: 50px;
+            height: 50px;
+            background-color: green;
+            position: absolute;
+
+        }
+    </style>
+
+</head>
+<body>
+    <input type="text" id="pole">
+    <p>
+        Typ zdarzenia:
+        <span id="eventType">---</span>
+    </p>
+
+    <p>
+        Pozycja myszy:
+        x = <span id="pageX">---</span>
+        y = <span id="pageY">---</span>
+    </p>
+
+    
+    <div id="kwadrat"></div>
+    <div id="japko"></div>
+    
+</body>
+</html>
