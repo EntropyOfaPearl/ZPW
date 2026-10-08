@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadania jquery</title>
+    <script>
+        //efekty JQuery
+
+        $(function(){
+            $("#ukryj").click(function(){
+                $("#tekst").hide();
+            })
+
+            let kotek = true;
+            $("#kotek").click(function(){
+                if(!kotek){
+                    $("#kot").show(2000)
+                    kotek = true
+                }else{
+                    $("#kot").hide(2000)
+                    kotek = false;
+                }
+            })
+
+            $("#komunikat").hide();
+            $("#zapisz").click(function(){
+                $("#komunikat").show(1000)
+            })
+
+            $("#przelacz").click(function(){
+                $("#opis").toggle(1000)
+            })
+
+            $("#p").click(function(){
+                $("#warning").toggle();
+            })
+
+          
+            $("#kotek2").click(function(){
+                $("#kot2").slideToggle("slow")
+        
+            })
+            $("#kotek2uf").click(function(){
+                $("#kot2").slideUp("fast")
+        
+            })
+            $("#kotek2us").click(function(){
+                $("#kot2").slideUp("slow")
+        
+            })
+            $("#kotek2df").click(function(){
+                $("#kot2").slideDown("fast")
+        
+            })
+            $("#kotek2ds").click(function(){
+                $("#kot2").slideDown("slow")
+        
+            })
+        })
+
+    
+    </script>
+    
+    <style>
+ 
+    </style>
+
+</head>
+<body>
+
+    <p id="tekst">Skibidi toilet goni mnie.</p>
+    <button id="ukryj">Śpiewając te piosenkę.</button>
+    <img id="kot" src="image.png" width="600">
+    <button id="kotek">kot schrodingera</button>
+    <p id="komunikat">Dziękujemy za zapisanie się!</p>
+    <button id="zapisz">Zapisz się</button>
+    <p id="opis">Opis produktu</p>
+    <button id="przelacz">Pokaż/ukryj opis</button>
+    <input type="password" id="haslo">
+    <p id="warning" style="display: hidden;">Hasło musi mieć min 8 znaków</p>
+    <button id="p">???????</button>
+    
+    <img id="kot2" src="ko2.png" width="600">
+    <button id="kotek2">Slideeeeeeee</button>
+    <button id="kotek2uf">slide up fast</button>
+    <button id="kotek2us">slide up slow</button>
+    <button id="kotek2df">slide down fast</button>
+    <button id="kotek2ds">slide down slow</button>
+
+
+</body>
+</html>
