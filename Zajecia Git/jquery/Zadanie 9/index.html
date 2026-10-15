@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadania jquery</title>
+    <script>
+        //efekty JQuery
+
+        $(function(){
+          $("#formularz").submit(function(e){
+            e.preventDefault();
+            if($("#maslo").val().length < 6){
+                $("#info").text("Hasło jest za krótkie")
+                $("#info").css("color","red")
+            }else{
+                $("#info").text(`Zalogowano`)
+                $("#info").css("color","green")
+            }
+          })
+
+          $("#formularz1").submit(function(e){
+            e.preventDefault();
+            if($("#nick").val() === ""){
+                $("#info1").text("Wpisz nick")
+            }else{
+                $("#info1").text(`Witaj, ${$("#nick").val()}`)
+            }
+          })
+
+          $("#kolor").change(function(){
+                $("body").css("background",$(this).val())
+          })
+
+          $("#pizza").change(function(){
+                $("#checkout").text(`do zapłaty: ${$(this).val()} zł`);
+          })
+        })
+
+    
+    </script>
+    
+    <style>
+ 
+    </style>
+
+</head>
+<body>
+
+    <form id="formularz1">
+        <input type="text" id="nick">
+        <button type="submit">Wyślij</button>
+    </form>
+    <p id="info1"></p>
+    <hr>
+    <form id="formularz">
+        <input type="text" id="E-mail">
+        <input type="password" id="maslo">
+        <button type="submit">Wyślij</button>
+    </form>
+    <p id="info"></p>
+    <hr>
+    <select id="kolor">
+        <option value="white">Biały</option>
+        <option value="yellow">Żółty</option>
+        <option value="lightblue">Niebieski</option>
+    </select>
+    <hr>
+    <select id="pizza">
+        <option value="20">mała</option>
+        <option value="30">średnia</option>
+        <option value="40">duża</option>
+    </select>
+    <p id="checkout"></p>
+
+</body>
+</html>
