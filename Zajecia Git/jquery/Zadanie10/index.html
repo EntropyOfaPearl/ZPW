@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zadania jquery</title>
+    <script>
+        //efekty JQuery
+
+        $(function(){
+            $("#newsletter").change(function(){
+                if($(this).is(":checked")){
+                    $("#stan").text("zapisano do newslettera")
+                }else{
+                    $("#stan").text("wypisano z newslettera")
+                }
+            })
+
+
+
+            $("#akceptacja").change(function(){
+                if($(this).is(":checked")){
+                    $("#register").prop("disabled",false);
+                }else{
+                    $("#register").prop("disabled",true);
+                }
+            })
+        
+            $("#tekst").on("input", function(){
+                $("#poglad").text($(this).val())
+            })
+
+            $("#licznik").on("input", function(){
+                let left = 100 - $(this).val().length;
+                $("#left").text(left)
+                if(left < 10){
+                    $(this).css("color","red");
+                }else{
+                    $(this).css("color","black");
+                }
+            })
+
+        })
+
+    
+    </script>
+    
+    <style>
+ 
+    </style>
+
+</head>
+<body>
+
+    <input type="checkbox" id="newsletter"> Chcę newsletter
+    <p id="stan"></p>
+    <hr>
+    <input type="checkbox" id="akceptacja">Akceptuję regulamin
+    <Button id="register" disabled> zarejestruj</Button>
+    <hr>
+    <input type="text" id="tekst">
+    <p>Pogląd <span id="poglad"></p>
+    <hr>
+    <textarea id="licznik" maxlength="100"></textarea>
+    <p>Zostało znaków: <span id="left">100</span></p>
+
+</body>
+</html>
